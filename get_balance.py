@@ -8,6 +8,7 @@ _NODE_ADDRESS = "94.130.10.55"
 
 def main():
     # step1 create dictionary_item_key
+    # public key -> 0125a6336791eba195c472a8b7dbcd256a6ecddf8863e586a3dfefe2581a5d672c
     account_key=CL_Key.from_string('account-hash-2293223427d59ebb331ac2221c3fcd1b3656a5cb72be924a6cdc9d52cdb6db0f')
     itemKey  = base64.b64encode(b'\x00' + account_key.identifier)  # b'\x00' for account; b'\x01' for contract package
     print("itemKey",itemKey.decode("utf-8"))
