@@ -36,7 +36,7 @@ public class BalanceERC20 {
         // step1: create dictionary item key
         final byte[] key = ByteUtils.decodeHex(recipientHex);
 
-        byte[] head = { 00 };
+        byte[] head = { 00 };  //00 for account; 01 for contract package
         byte[] itemkey_bytes = new byte[key.length + 1];
         System.arraycopy(head, 0, itemkey_bytes, 0, head.length);
         System.arraycopy(key, 0, itemkey_bytes, head.length, key.length);
